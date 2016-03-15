@@ -85,14 +85,16 @@ start /b /wait perl Configure debug-VC-WIN64A
 start /b /wait ms\do_win64a.bat
 nmake -f ms\nt.mak
 xcopy "out32.dbg\libeay32.lib" "x64\Debug_2013" /y
-xcopy "out32.dbg\ssleay32.lib" "x64\Debug_2013" /y</NMakeBuildCommandLine>
+xcopy "out32.dbg\ssleay32.lib" "x64\Debug_2013" /y
+xcopy "tmp32.dbg\lib.pdb" "x64\Debug_2013" /y</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>cd ..
 nmake -f ms\nt.mak vclean
 start /b /wait perl Configure debug-VC-WIN64A
 start /b /wait ms\do_win64a.bat
 nmake -f ms\nt.mak
 xcopy "out32.dbg\libeay32.lib" "x64\Debug_2013" /y
-xcopy "out32.dbg\ssleay32.lib" "x64\Debug_2013" /y</NMakeReBuildCommandLine>
+xcopy "out32.dbg\ssleay32.lib" "x64\Debug_2013" /y
+xcopy "tmp32.dbg\lib.pdb" "x64\Debug_2013" /y</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>cd ..
 del /Q tmp32.dbg\*.*
 del /Q out32.dbg\*.*</NMakeCleanCommandLine>
@@ -123,7 +125,8 @@ start /b /wait perl Configure VC-WIN64A
 start /b /wait ms\do_win64a.bat
 nmake -f ms\nt.mak
 xcopy "out32\libeay32.lib" "x64\Release_2013" /y
-xcopy "out32\ssleay32.lib" "x64\Release_2013" /y</NMakeBuildCommandLine>
+xcopy "out32\ssleay32.lib" "x64\Release_2013" /y
+xcopy "tmp32\lib.pdb" "x64\Release_2013" /y</NMakeBuildCommandLine>
     <NMakeCleanCommandLine>cd ..
 del /Q tmp32\*.*
 del /Q out32\*.*</NMakeCleanCommandLine>
@@ -133,7 +136,8 @@ start /b /wait perl Configure VC-WIN64A
 start /b /wait ms\do_win64a.bat
 nmake -f ms\nt.mak
 xcopy "out32\libeay32.lib" "x64\Release_2013" /y
-xcopy "out32\ssleay32.lib" "x64\Release_2013" /y</NMakeReBuildCommandLine>
+xcopy "out32\ssleay32.lib" "x64\Release_2013" /y
+xcopy "tmp32\lib.pdb" "x64\Release_2013" /y</NMakeReBuildCommandLine>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
