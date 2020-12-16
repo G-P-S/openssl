@@ -303,7 +303,7 @@ $code.=<<___;
 .quad	OPENSSL_armcap_P-.
 .asciz	"SHA1 block transform for ARMv8, CRYPTOGAMS by <appro\@openssl.org>"
 .align	2
-.comm	OPENSSL_armcap_P,4,4
+.hidden	OPENSSL_armcap_P
 ___
 }}}
 

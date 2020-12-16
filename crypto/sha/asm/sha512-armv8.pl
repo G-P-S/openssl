@@ -389,7 +389,7 @@ ___
 }
 
 $code.=<<___;
-.comm	OPENSSL_armcap_P,4,4
+.hidden	OPENSSL_armcap_P
 ___
 
 {   my  %opcode = (
